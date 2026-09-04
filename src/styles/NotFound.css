@@ -1,0 +1,19 @@
+.not-found {
+  padding: 120px 0;
+  text-align: center;
+}
+
+.not-found__inner {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.not-found__title {
+  font-size: clamp(28px, 4vw, 38px);
+  margin: 8px 0 16px;
+}
+
+.not-found__text {
+  color: var(--color-slate-light);
+  margin-bottom: 28px;
+}

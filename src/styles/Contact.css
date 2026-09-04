@@ -1,0 +1,23 @@
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.contact-layout {
+  max-width: 780px;
+}
+
+.contact-form-wrap {
+  margin-top: 12px;
+}
+
+#contact-form {
+  scroll-margin-top: calc(var(--navbar-height, 76px) + 20px);
+}
+
+@media (max-width: 760px) {
+  .contact-cards {
+    grid-template-columns: 1fr;
+  }
+}

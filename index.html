@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <meta
+      name="theme-color"
+      content="#0A1F33"
+    />
+
+    <meta
+      name="description"
+      content="MMD Logistics provides reliable full truckload freight transportation, 53' dry van capacity, and pickup and delivery service across all 50 U.S. states."
+    />
+
+    <meta
+      name="robots"
+      content="index, follow"
+    />
+
+    <meta
+      name="author"
+      content="MMD Logistics"
+    />
+
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon.svg"
+    />
+
+    <link
+      rel="preload"
+      as="image"
+      href="/images/hero-bg-truck.webp"
+      type="image/webp"
+      fetchpriority="high"
+    />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:type"
+      content="website"
+    />
+
+    <meta
+      property="og:title"
+      content="MMD Logistics | Nationwide Full Truckload Freight"
+    />
+
+    <meta
+      property="og:description"
+      content="Reliable full truckload freight transportation and 53' dry van capacity across all 50 U.S. states."
+    />
+
+    <meta
+      property="og:site_name"
+      content="MMD Logistics"
+    />
+
+    <!-- Twitter / Social Sharing -->
+    <meta
+      name="twitter:card"
+      content="summary"
+    />
+
+    <meta
+      name="twitter:title"
+      content="MMD Logistics | Nationwide Full Truckload Freight"
+    />
+
+    <meta
+      name="twitter:description"
+      content="Reliable full truckload freight transportation and 53' dry van capacity across all 50 U.S. states."
+    />
+
+    <!-- Fonts -->
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap"
+    />
+
+    <title>
+      MMD Logistics | Nationwide Full Truckload Freight
+    </title>
+
+    <!-- Initial loading screen -->
+    <style>
+      #initial-loader {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+        background: #0A1F33;
+      }
+
+      #initial-loader__mark {
+        font-family:
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: #fff;
+      }
+
+      #initial-loader__mark span {
+        color: #FF6B1A;
+      }
+
+      #initial-loader__spinner {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        border: 3px solid rgba(255, 255, 255, 0.18);
+        border-top-color: #FF6B1A;
+        animation: initial-loader-spin 0.8s linear infinite;
+      }
+
+      @keyframes initial-loader-spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        #initial-loader__spinner {
+          animation: none;
+        }
+      }
+
+      #initial-loader__sr-text {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="root">
+      <div
+        id="initial-loader"
+        role="status"
+        aria-live="polite"
+      >
+        <span
+          id="initial-loader__spinner"
+          aria-hidden="true"
+        ></span>
+
+        <span id="initial-loader__mark">
+          <span>MMD</span> LOGISTICS
+        </span>
+
+        <span id="initial-loader__sr-text">
+          Loading MMD Logistics…
+        </span>
+      </div>
+    </div>
+
+    <script
+      type="module"
+      src="/src/main.jsx"
+    ></script>
+  </body>
+</html>

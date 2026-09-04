@@ -1,0 +1,374 @@
+html {
+  scroll-behavior: smooth;
+}
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 100px 0 120px;
+
+  color: var(--color-white);
+  background-color: var(--color-navy);
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+
+  isolation: isolate;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background: linear-gradient(
+    90deg,
+    rgba(7, 20, 31, .94) 0%,
+    rgba(7, 20, 31, .86) 32%,
+    rgba(7, 20, 31, .45) 58%,
+    rgba(7, 20, 31, .15) 100%
+  );
+}
+
+.hero__inner {
+  position: relative;
+  z-index: 2;
+}
+
+.hero__copy {
+  max-width: 620px;
+  animation: heroFadeUp .7s cubic-bezier(.4,0,.2,1) both;
+  animation-fill-mode: both;
+}
+
+.hero__title {
+  margin: 8px 0 22px;
+  font-size: clamp(36px,5vw,58px);
+  color: var(--color-white);
+}
+
+.hero__title-accent {
+  color: var(--color-orange);
+}
+
+.hero__subtitle {
+  max-width: 500px;
+  margin-bottom: 32px;
+  font-size: 17px;
+  color: rgba(255,255,255,.82);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0,24px,0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+  }
+}
+
+.route-divider-wrap {
+  padding: 28px 0;
+  background: var(--color-fog);
+}
+
+/* ======================================================
+   Luxury Fleet Section
+====================================================== */
+
+.fleet-section {
+  position: relative;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      160deg,
+      #020617 0%,
+      #0F172A 40%,
+      #1E293B 100%
+    );
+}
+
+.fleet-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  background:
+    radial-gradient(circle at 15% 20%, rgba(59,130,246,.18), transparent 28%),
+    radial-gradient(circle at 90% 15%, rgba(249,115,22,.20), transparent 25%),
+    radial-gradient(circle at 80% 90%, rgba(14,165,233,.12), transparent 30%);
+}
+/* Premium grid overlay */
+.fleet-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+
+  background-size: 48px 48px;
+  opacity: .35;
+}
+
+.fleet-section > .container {
+  position: relative;
+  z-index: 5;
+}
+/*--------------------------------------------------------*/
+/* White headings */
+
+.fleet-section .section-heading__title {
+  color: #fff;
+}
+
+.fleet-section .section-heading__subtitle {
+  color: rgba(255,255,255,.75);
+}
+
+.fleet-section .eyebrow {
+  color: var(--color-orange);
+}
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.cta-banner {
+  padding: 56px 0;
+  background: var(--color-orange);
+}
+
+.cta-banner__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.cta-banner__title {
+  font-size: clamp(26px, 3.5vw, 34px);
+  color: var(--color-navy);
+}
+
+.cta-banner__subtitle {
+  margin-top: 8px;
+  font-size: 16px;
+  color: rgba(10, 31, 51, .8);
+}
+
+.cta-banner__actions {
+  display: flex;
+  gap: 14px;
+}
+
+/* ===========================
+   White cards inside fleet section
+=========================== */
+
+.fleet-section .card--light {
+  background: rgba(255, 255, 255, .98);
+  border: 1px solid rgba(255,255,255,.12);
+  /* Keep card rendering cheap on mobile; the translucent surface is enough. */
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.fleet-section .card--light:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 15px 40px rgba(0,0,0,.35),
+    0 0 25px rgba(255,107,26,.18);
+}
+
+.fleet-section .card--light .card__title {
+  color: #111;
+}
+
+.fleet-section .card--light .card__description {
+  color: #333;
+}
+
+.fleet-section .card__icon {
+  background: rgba(255,107,26,.12);
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width:900px) {
+
+  .hero {
+    padding: 72px 0 88px;
+    background-attachment: scroll;
+  }
+
+  .hero__overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(7,20,31,.92) 0%,
+        rgba(7,20,31,.88) 100%
+      );
+  }
+
+  .hero__copy {
+    max-width: 100%;
+  }
+
+  .home-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+}
+@media (max-width:560px) {
+
+  .hero {
+    padding: 60px 0 70px;
+  }
+
+  .hero__title {
+    font-size: clamp(34px, 9vw, 46px);
+  }
+
+  .hero__subtitle {
+    font-size: 15px;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .home-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-banner__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cta-banner__actions {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+}
+
+/* ===========================
+   Reduce Motion
+=========================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .hero__copy {
+    animation: none;
+  }
+
+  .fleet-section::before,
+  .fleet-section::after {
+    animation: none;
+  }
+
+}
+
+/* ===========================
+   Performance
+=========================== */
+
+.hero,
+.fleet-section,
+.cta-banner {
+  contain: layout paint;
+}
+
+.hero__copy {
+
+}
+
+/* ===========================
+   White cards inside parallax section
+=========================== */
+
+.section--parallax .card--light .card__title {
+  color: #000;
+}
+
+.section--parallax .card--light .card__description {
+  color: #222;
+}
+
+/* ===========================
+   Luxury Fleet Section Extras
+=========================== */
+
+.fleet-section .section-heading {
+  margin-bottom: 60px;
+}
+
+.fleet-section .section-heading__title {
+  text-shadow: 0 2px 20px rgba(0,0,0,.35);
+}
+
+.fleet-section .section-heading__subtitle {
+  text-shadow: 0 1px 10px rgba(0,0,0,.25);
+}
+
+.fleet-section .card {
+  border-radius: 16px;
+}
+
+.fleet-section .card:hover {
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.fleet-section::before,
+.fleet-section::after {
+  animation: glowMove 12s linear infinite alternate;
+}
+
+@keyframes glowMove {
+
+  0% {
+    transform: translate(0,0);
+  }
+
+  100% {
+    transform: translate(20px,-20px);
+  }
+
+}
+@media (max-width: 900px) {
+  .fleet-section::before,
+  .fleet-section::after {
+    display: none;
+  }
+
+  .fleet-section {
+    background: linear-gradient(160deg, #020617 0%, #0F172A 55%, #1E293B 100%);
+  }
+
+  .fleet-section .card--light {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}

@@ -1,0 +1,28 @@
+.section-heading {
+  margin-bottom: 48px;
+}
+
+.section-heading--center {
+  text-align: center;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-heading--left {
+  text-align: left;
+}
+
+.section-heading__title {
+  font-size: clamp(28px, 4vw, 40px);
+}
+
+.section-heading__subtitle {
+  margin-top: 14px;
+  color: var(--color-slate-light);
+  font-size: 17px;
+}
+
+.section--navy .section-heading__subtitle {
+  color: rgba(255, 255, 255, 0.75);
+}

@@ -1,0 +1,113 @@
+.card {
+  display: block;
+  padding: 32px 28px;
+  height: 100%;
+
+  border-radius: var(--radius-md);
+
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base),
+    border-color var(--transition-base);
+
+  backface-visibility: hidden;
+}
+
+.card--link {
+  cursor: pointer;
+}
+
+/* will-change is applied only while the card is actually being interacted
+   with (not permanently on every card) so the browser doesn't promote
+   every card on the page to its own GPU layer at rest - that's what was
+   adding up on pages with many cards and slowing down low-end/mobile
+   devices. */
+.card--link:hover,
+.card--link:focus-visible {
+  will-change: transform;
+}
+
+.card--link:hover {
+  transform: translate3d(0, -4px, 0);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--color-orange);
+}
+
+.card--link .card__title {
+  text-decoration: none;
+}
+
+.card--link:hover .card__title {
+  color: var(--color-orange);
+}
+
+/* ---------------- LIGHT CARD ---------------- */
+
+.card--light {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+}
+
+.card--light:hover {
+  transform: translate3d(0, -4px, 0);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.card--light .card__title {
+  color: #000;
+}
+
+.card--light .card__description {
+  color: #222;
+}
+
+/* ---------------- NAVY CARD ---------------- */
+
+.card--navy {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.card--navy:hover {
+  transform: translate3d(0, -4px, 0);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--color-orange);
+}
+
+.card--navy .card__title {
+  color: var(--color-white);
+}
+
+.card--navy .card__description {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+/* ---------------- ICON ---------------- */
+
+.card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  margin-bottom: 18px;
+
+  border-radius: var(--radius-sm);
+
+  background: rgba(255, 107, 26, 0.12);
+
+  font-size: 24px;
+}
+
+.card__title {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.card__description {
+  font-size: 15px;
+  line-height: 1.65;
+}

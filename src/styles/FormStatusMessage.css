@@ -1,0 +1,19 @@
+.form-status {
+  padding: 14px 18px;
+  border-radius: var(--radius-sm);
+  font-size: 14.5px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.form-status--success {
+  background: #E7F5EC;
+  color: #1E7A3E;
+  border: 1px solid #BEE6CB;
+}
+
+.form-status--error {
+  background: #FCEAEA;
+  color: #B32626;
+  border: 1px solid #F3C6C6;
+}

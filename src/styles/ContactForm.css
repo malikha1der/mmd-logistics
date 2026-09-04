@@ -1,0 +1,25 @@
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: var(--color-white);
+  padding: 36px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.contact-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 640px) {
+  .contact-form {
+    padding: 24px;
+  }
+
+  .contact-form__row {
+    grid-template-columns: 1fr;
+  }
+}

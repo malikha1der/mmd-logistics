@@ -1,0 +1,30 @@
+.quote-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: var(--color-white);
+  padding: 36px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.quote-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.quote-form__row--three {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width: 760px) {
+  .quote-form {
+    padding: 24px;
+  }
+
+  .quote-form__row,
+  .quote-form__row--three {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,39 @@
+.terms {
+  max-width: 820px;
+}
+
+.terms__updated {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--color-slate-light);
+  margin-bottom: 40px;
+}
+
+.terms-section {
+  margin-bottom: 36px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.terms-section:last-child {
+  border-bottom: none;
+}
+
+.terms-section__title {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.terms-section__body {
+  color: var(--color-slate-light);
+  font-size: 15.5px;
+  line-height: 1.75;
+}
+
+.terms__placeholder {
+  font-style: italic;
+  color: #A8B2BC;
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+}

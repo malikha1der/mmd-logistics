@@ -1,0 +1,38 @@
+.route-divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 220px;
+  margin: 0 auto;
+  padding: 4px 0;
+}
+
+.route-divider__line {
+  flex: 1;
+  height: 3px;
+  background-image: repeating-linear-gradient(
+    to right,
+    var(--color-orange) 0,
+    var(--color-orange) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+}
+
+.route-divider--dark .route-divider__line {
+  background-image: repeating-linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.6) 0,
+    rgba(255, 255, 255, 0.6) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+}
+
+.route-divider__marker {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-orange);
+  flex-shrink: 0;
+}
