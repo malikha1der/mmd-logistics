@@ -14,6 +14,7 @@ import Card from '../components/Card'
 import Button from '../components/Button'
 import Reveal from '../components/Reveal'
 import '../styles/Home.css'
+import { Link } from 'react-router-dom'
 
 
 const FLEET_SLIDES = [
