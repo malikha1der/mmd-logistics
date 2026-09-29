@@ -1,7 +1,7 @@
 import React from 'react';
 import { Phone, ArrowRight, ShieldCheck, CheckCircle2 } from 'lucide-react';
 import { COMPANY_DETAILS } from '../types';
-import heroTruck from '../assets/images/hero_truck_dryvan_1790637172398.jpg';
+import heroTruck from '../assets/images/hero_truck.jpg';
 export const Hero: React.FC = () => {
   const scrollToQuote = (e: React.MouseEvent) => {
     e.preventDefault();
