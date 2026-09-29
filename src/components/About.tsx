@@ -1,7 +1,7 @@
 import React from 'react';
 import { Truck, ShieldCheck, MapPin } from 'lucide-react';
 import { COMPANY_DETAILS } from '../types';
-import mmdTruck from '../assets/images/mmd_truck.jpg';
+import mmdTruck from '../assets/images/mmd_truck.webp';
 
 export const About: React.FC = () => {
   return (
@@ -43,8 +43,11 @@ export const About: React.FC = () => {
                 <img
                   src={mmdTruck}
                   alt="MMD Logistics commercial semi-truck pulling a 53-foot dry van trailer"
+                  width={1200}
+                  height={896}
                   className="w-full h-72 sm:h-80 object-cover object-center"
                   loading="lazy"
+                  decoding="async"
                   referrerPolicy="no-referrer"
                 />
 

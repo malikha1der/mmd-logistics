@@ -1,7 +1,7 @@
 import React from 'react';
 import { Phone, ArrowRight, ShieldCheck, CheckCircle2 } from 'lucide-react';
 import { COMPANY_DETAILS } from '../types';
-import heroTruck from '../assets/images/hero_truck.jpg';
+import heroTruck from '../assets/images/hero_truck.webp';
 export const Hero: React.FC = () => {
   const scrollToQuote = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -22,8 +22,11 @@ export const Hero: React.FC = () => {
         <img
           src={heroTruck}
           alt="American commercial semi-truck pulling a 53-foot dry van trailer on interstate highway"
+          width={1376}
+          height={768}
           className="w-full h-full object-cover object-center scale-105 motion-safe:animate-[pulse_10s_ease-in-out_infinite_alternate]"
           loading="eager"
+          decoding="async"
           fetchPriority="high"
           referrerPolicy="no-referrer"
         />
