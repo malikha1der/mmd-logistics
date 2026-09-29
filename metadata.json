@@ -1,0 +1,6 @@
+{
+  "name": "MMD Logistics LLC - Interstate Freight Transportation",
+  "description": "Professional US interstate freight transportation specializing in 53-foot dry van solutions. MC 1178290, USDOT 3535101. Burnsville, MN.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
