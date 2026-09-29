@@ -1,7 +1,7 @@
 import React from 'react';
 import { Phone, ArrowRight, ShieldCheck, CheckCircle2 } from 'lucide-react';
 import { COMPANY_DETAILS } from '../types';
-
+import heroTruck from '../assets/images/hero_truck_dryvan_1790637172398.jpg';
 export const Hero: React.FC = () => {
   const scrollToQuote = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -20,7 +20,7 @@ export const Hero: React.FC = () => {
       {/* Background Image Container */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/src/assets/images/hero_truck_dryvan_1790637172398.jpg"
+          src={heroTruck}
           alt="American commercial semi-truck pulling a 53-foot dry van trailer on interstate highway"
           className="w-full h-full object-cover object-center scale-105 motion-safe:animate-[pulse_10s_ease-in-out_infinite_alternate]"
           loading="eager"
